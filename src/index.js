@@ -2,11 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { ConfigProvider } from 'antd';
+import enUs from 'antd/es/locale/en_US';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ConfigProvider locale={enUs}>
+      <App />
+    </ConfigProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
